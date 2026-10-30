@@ -5,15 +5,18 @@ struct student {
     string name;
     int age;
     student *what;
-};
+    };
 void display1(student st) {
     cout << "Student Name " << st.name << endl;
     cout << "Student Age " << st.age << endl;
-}
+    }
 void display2(student *st) {
     cout << "Student Name " << st->name << endl;
     cout << "Student Age " << st->age << endl;
-}
+    }
+
+
+    // understanding code using diagrams on slides of lecture week 3
 int main() {
     student st1, st2, *st3;
     st3 = new student;
@@ -31,4 +34,4 @@ int main() {
     display2(st1.what);
     display2(st3->what);
     return 0;
-}
+    }
