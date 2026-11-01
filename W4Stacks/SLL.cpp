@@ -38,6 +38,19 @@ void addFirst(Node **tmpHead, int n) {
     *tmpHead = newNode;
 }
 
+void removeLast(Node *curr){
+    if(curr->next==NULL){
+        cout<< "Single Node! Remove Last aborted!";
+    }
+    else{
+    while(curr->next->next != NULL){
+        curr = curr->next;
+    }
+    delete curr->next;
+    curr->next = NULL;
+  }
+}
+
 int main() {
     Node *head = new Node;
     initSLL(head, 20);
@@ -48,6 +61,10 @@ int main() {
 
     addFirst(&head, 10);
     displayList(head);
+
+    removeLast(head);
+    displayList(head);
+
 
     
     // Node *head2 = new Node;
