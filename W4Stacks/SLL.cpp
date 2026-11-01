@@ -51,6 +51,30 @@ void removeLast(Node *curr){
   }
 }
 
+void removeFirst(Node **tmpHead){
+
+    if((*tmpHead)->next != NULL){
+        Node *oldNode = *tmpHead;
+        *tmpHead = (*tmpHead)->next;
+
+        delete oldNode;
+    }
+    else{
+        cout<<"Single Node! Remove first aborted.";
+    }
+}
+
+
+int getListSize(Node *curr){
+    int size = 0;
+    while(curr != NULL){
+        size++;
+        curr = curr->next;
+    }
+
+    return size;
+}
+
 int main() {
     Node *head = new Node;
     initSLL(head, 20);
@@ -65,15 +89,16 @@ int main() {
     removeLast(head);
     displayList(head);
 
+    removeFirst(&head);
+    displayList(head);
 
-    
+    cout << "SIZE : " << getListSize(head) << endl;
+
     // Node *head2 = new Node;
     // initSLL(head2, 25);
 
     // Node *head3 = new Node;
     // initSLL(head3, 30);
 
-
-     
     return 0;
 }
