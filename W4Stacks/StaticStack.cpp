@@ -78,5 +78,6 @@ int main(){
     cout<<"Peek: "<<peek(aStack)<<endl;
     displayStack(aStack);
     cout<<"Stack Size: "<<getStackSize(aStack)<<endl;
-    
+
+    return 0;
 }
