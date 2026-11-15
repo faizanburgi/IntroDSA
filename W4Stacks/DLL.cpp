@@ -16,8 +16,7 @@ void initDLL(Node *tmpHead, int n) {
 void addLast(Node *curr, int n){
     Node *newNode = new Node;
     newNode->data = n;
-    newNode->next = NULL;
-    // newNode->prev = 
+    newNode->next = NULL; 
 
     while(curr->next != NULL){
         curr = curr->next;

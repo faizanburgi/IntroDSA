@@ -19,7 +19,7 @@ bool isEmpty(int tmpTop){
 
 void push(Stack *ptrStack,int n){
     if(isFull(ptrStack->top)){
-        cout<<"Stack Overflow"<<endl;
+        cout<<"Stack Overflow! Push aborted."<<endl;
     } else{
         ptrStack->top++;
         ptrStack->data[ptrStack->top]=n;

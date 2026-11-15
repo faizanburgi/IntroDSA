@@ -72,8 +72,8 @@ int main(){
     char expr[MAXS];
     cout<<"Enter an expression: ";
     cin>>expr;
-    int k = 0;
     
+    int k = 0;
     while(expr[k]){
         if (expr[k] =='('){
             push(&aStack, k);

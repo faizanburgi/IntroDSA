@@ -18,7 +18,7 @@ void enqueue(Node **tmpFront, int n){
         *tmpFront = newNode;
     }else{
         Node *curr = *tmpFront;
-        while(curr->next !=NULL){
+        while(curr->next !=NULL){   
             curr = curr ->next;
         }
         curr->next = newNode;
